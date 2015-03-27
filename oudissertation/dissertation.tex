@@ -1,0 +1,111 @@
+\documentclass[letter,12pt,dissertation]{OUdissertation}
+\usepackage{graphicx, subfigure} %allows .eps and .epsi graphics to be inserted
+\usepackage{epic} %allows use of latex graphics
+\usepackage{eepic} %allows use of latex graphics
+\usepackage{amssymb,amsmath}
+\usepackage{amsfonts}
+\usepackage[amssymb]{SIunits}
+\usepackage{multirow}
+\usepackage{psfrag}
+\usepackage{float}
+\usepackage{bar}
+\usepackage[centerfoot]{pageno}
+\usepackage{rotating}
+\setlength{\footskip}{0.365in}
+
+\let\autoref\ref
+
+\usepackage{natbib} %with amermeteorsoc.bst
+\bibpunct{(}{)}{;}{a}{}{,}
+
+\newcommand{\be}{\begin{equation}} %these definitions save typing
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[3]{\frac{\partial^{2}#1}{\partial#2 \partial#3}}
+\newcommand{\bse}{\begin{subequations}}
+\newcommand{\ese}{\end{subequations}}
+\def\bal#1\eal{\begin{align}#1\end{align}}%allows for shortcut to align
+
+\begin{document}
+\title{A SAMPLE OU DISSERTATION}
+\author{ROBERT ANTHONY STOOPS}
+\depositdate{2015}
+\majorfield{SCHOOL OF HARD KNOCKS}
+\memberone{Dr. Barry Switzer, Co-Chair}
+\membertwo{Dr. Bud Wilkinson, Co-Chair}
+\memberthree{Dr. Steve Owens}
+%next two members are used in dissertation
+\memberfour{Dr. Sam Bradford}
+\memberfive{Dr. Jason White}
+%%%%
+\begin{preface}
+\prefacesectionX{\normalfont Dedication}
+I dedicate this dissertation to myself, because I am awesome.
+
+\prefacesection{Acknowledgments}
+
+I would like to thank my friends, family, fans, and pets for supporting me.
+%must leave a blank line next to avoid bug:
+
+\tableofcontents
+\listoftables
+\listoffigures
+\prefacesection{Abstract}
+
+This is a dissertation about nothing in particular.
+
+\end{preface}
+\chapter{Examples of LaTeX Items in a Dissertation}
+\label{intro}
+
+\section{Figures}
+\label{figures}
+
+Here is an example figure.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{oulogo.png}
+\caption{Boomer Sooner}
+\label{fig:oulogo}
+\end{figure}
+
+\section{Equations}
+\label{equations}
+
+Here is an example equation
+
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4 ac}}{2a}
+\end{equation}
+
+
+
+\section{Tables}
+
+Here is an example table.
+
+\begin{table}[h]
+\caption{Some cool numbers.}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+\textbf{Meaning of Life} & \textbf{Football Play} & \textbf{Pi} & \textbf{Golden Ratio} & \textbf{2+2} & \textbf{Gravity}\\
+\hline
+42 & Blue 32 & 3.1415 & 1.6180 & 4 & 9.81\\
+\hline
+\end{tabular}
+\label{table1}
+\end{table}
+
+\section{Cite someone}
+
+Bob Stoops is pretty awesome, no doubt about it \citep{Stoops2015}.
+
+\references{amermeteorsoc}{references}
+%comment out the next four lines if you don't have an appendix
+%\appendix
+%\chapter{Some Bullshit}
+
+\end{document}
